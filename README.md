@@ -34,7 +34,15 @@ Specific python versions can be used to initiate the environment using e.g. ```/
 
 CNN weights and germline likeness lookup arrays are automatically downloaded from <a href="https://zenodo.org/records/13764770">zenodo.org/records/13764770</a> when Humatch is first run.
 
-$${\color{red}If \space you \space have \space issues \space with \space the \space auto \space downloads}$$ then the 3 weights (.h5) files and 24 germline likeness lookup arrays (.npy) files can be manually downloaded and saved in ```Humatch/Humatch/trained_models``` and ```Humatch/Humatch/germline_likeness_lookup_arrays``` respectively. Once these files are downloaded and saved in the right folders, please rerun the ```pip install .``` command to add these files to Humatch's package data. 
+$${\color{red}If \space you \space have \space issues \space with \space the \space auto \space downloads}$$ then the 3 weights (.h5) files and 24 germline likeness lookup arrays (.npy) files can be manually downloaded and saved in ```Humatch/Humatch/trained_models``` and ```Humatch/Humatch/germline_likeness_lookup_arrays``` respectively. Once these files are downloaded and saved in the right folders, please rerun the ```pip install .``` command to add these files to Humatch's package data.
+
+## Web tool
+
+We have a live [web tool](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/sabpred/humatch/):
+
+<https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/sabpred/humatch/>
+
+If you use this code or the web tool in your work, please [cite the paper](#citation).
 
 ## Humanness classification
 
