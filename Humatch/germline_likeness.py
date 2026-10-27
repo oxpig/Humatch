@@ -9,7 +9,9 @@ from Humatch.utils import (
 
 # gl arrays added to compiled env package_data
 HUMATCH_CODE_DIR = os.path.dirname(os.path.abspath(__file__))
-GL_DIR = os.path.join(HUMATCH_CODE_DIR, "germline_likeness_lookup_arrays")
+# set HUMATCH_WEIGHTS_DIR to keep trained_models/ and germline_likeness_lookup_arrays/ elsewhere
+HUMATCH_WEIGHTS_DIR = os.environ.get("HUMATCH_WEIGHTS_DIR") or HUMATCH_CODE_DIR
+GL_DIR = os.path.join(HUMATCH_WEIGHTS_DIR, "germline_likeness_lookup_arrays")
 if not os.path.exists(GL_DIR):
     os.makedirs(GL_DIR)
 vgenes = [f"hv{i}" for i in range(1, 8)] + [f"lv{i}" for i in range(1, 11)] + [f"kv{i}" for i in range(1, 8)]
