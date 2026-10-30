@@ -6,7 +6,9 @@ from Humatch.utils import HEAVY_V_GENE_CLASSES, LIGHT_V_GENE_CLASSES, PAIRED_CLA
 
 # cnn weights added to compiled env package_data
 HUMATCH_CODE_DIR = os.path.dirname(os.path.abspath(__file__))
-CNN_WEIGHTS_DIR = os.path.join(HUMATCH_CODE_DIR, "trained_models")
+# set HUMATCH_WEIGHTS_DIR to keep trained_models/ and germline_likeness_lookup_arrays/ elsewhere
+HUMATCH_WEIGHTS_DIR = os.environ.get("HUMATCH_WEIGHTS_DIR") or HUMATCH_CODE_DIR
+CNN_WEIGHTS_DIR = os.path.join(HUMATCH_WEIGHTS_DIR, "trained_models")
 if not os.path.exists(CNN_WEIGHTS_DIR):
     os.makedirs(CNN_WEIGHTS_DIR)
 HEAVY_WEIGHTS = os.path.join(CNN_WEIGHTS_DIR, "heavy.weights.h5")

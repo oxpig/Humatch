@@ -16,6 +16,9 @@ setup(
         'Humatch-classify=Humatch.classify:command_line_interface',
         'Humatch-humanise=Humatch.humanise:command_line_interface',
         ]},
+    # ANARCI is also a runtime dependency (`Humatch.align` imports it), but it
+    # is deliberately absent here.  The `anarci` package on PyPI is not an
+    # official release, so ANARCI must come from Bioconda (`bioconda::anarci`).
     install_requires=[
         'numpy>=1.26.4',
         'pandas>=2.2.3',
